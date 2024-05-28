@@ -11,16 +11,11 @@ const ChatGPTComponent = () => {
     setError(''); // Clear previous error
     try {
       const result = await axios.post(
-        'https://api.openai.com/v1/chat/completions',
-        {
-          model: 'gpt-3.5-turbo-1106',
-          messages: [{ role: 'user', content: input }],
-          max_tokens: 150,
-        },
+        'http://localhost:5000/api/chat',
+        { input },
         {
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer sk-proj-1F0apebNDyF9ktzQJ6n3T3BlbkFJ0pLanGWZwHYwig2bRXvs`,
           },
         }
       );
