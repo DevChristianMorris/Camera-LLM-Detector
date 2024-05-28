@@ -16,7 +16,7 @@ app.post('/api/chat', async (req, res) => {
     const result = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: 'gpt-3.5-turbo-1106',
+        model: 'gpt-4-turbo',
         messages: [{ role: 'user', content: input }],
         max_tokens: 150,
       },
