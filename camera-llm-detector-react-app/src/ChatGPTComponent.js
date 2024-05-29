@@ -33,7 +33,7 @@ const ChatGPTComponent = () => {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask ChatGPT something..."
+          placeholder="Ask me something..."
         />
         <button type="submit">Submit</button>
       </form>
